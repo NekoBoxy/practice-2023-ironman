@@ -1,0 +1,62 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px auto;
+  padding: 20px;
+}
+
+ul {
+  margin: 10px 50px;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+li[class] {
+  font-size: 200%;
+}
+
+/* 指定屬性值為 a 吃樣式 */
+li[class="a"] {
+  background-color: yellow;
+}
+
+/* 以空格分隔的屬性值們，若有 a 就會吃樣式 */
+li[class~="a"] {
+  color: red;
+}
+
+/* 屬性值內含有 a 的（a, ab, a b）都會吃到樣式 */
+li[class*="a"] {
+  font-size: 28px;
+}
+
+/* 屬性值"起始"為 */
+li[class^="ab"] {
+  border: 2px solid #005757;
+}
+
+/* 和上一個有點像，但是是找屬性值"開頭"為 front- 的元素*/
+li[class|="front"] {
+  box-shadow: 3px 3px 5px 3px #6C3365;
+}
+
+/* 找屬性值的"結尾" */
+li[class$="padding"] {
+  padding: 20px;
+}
+
+h2,
+span,
+p {
+  color: #005757;
+}
+
+.box1 {
+  background-color: #00575710;
+}

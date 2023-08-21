@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>屬性選擇器們</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <button type="button" onclick="toHome()">回入口目錄頁</button>
+  </header>
+  <main>
+    <h1>屬性選擇器們</h1>
+    <ul>
+      <li>Item 1</li>
+      <li class="a first-li">Item 2</li>
+      <li class="a b">Item 3</li>
+      <li class="ab first-box">Item 4</li>
+      <li class="front-end ab">Item 5</li>
+      <li class="front-end padding">Item 6</li>
+      <li class="cd foo front-end">Item 7</li>
+      <li class="front cd padding">Item 8</li>
+    </ul>
+  </main>
+
+  <script>
+    function toHome() {
+      history.back();
+    };
+  </script>
+</body>
+
+</html>

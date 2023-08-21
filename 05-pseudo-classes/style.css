@@ -1,0 +1,15 @@
+form div {
+  margin-bottom: 8px;
+}
+
+p[class="read-only"]:read-only {
+  background-color: aquamarine;
+}
+
+/* .read-only:read-only {
+  background-color: aquamarine;
+} */
+
+option[value$="ow"]:disabled {
+  background-color: gray;
+}

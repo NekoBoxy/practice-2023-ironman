@@ -1,0 +1,46 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+main {
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+
+}
+
+.box {
+  border: 1px solid black;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+/* 後代選擇器（空格） */
+.test-1 span {
+  background-color: #00575750;
+}
+
+/* 子層選擇器（>）*/
+ul>li {
+  color: #FF0000;
+}
+
+/* 通用兄弟選擇器（~） */
+.test-2 p~span {
+  background-color: #FF44FF;
+}
+
+
+/* 相鄰兄弟選擇器（+） */
+.box p+div {
+  background-color: #eccc88;
+}
+
+.test-4.test-6 {
+  color: rgb(0, 184, 86);
+}

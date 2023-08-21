@@ -1,0 +1,27 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  margin: 20px 30px;
+  padding: 20px;
+}
+
+h1,
+h3,
+li {
+  margin-bottom: 10px;
+}
+
+.box {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+
+ul {
+  margin-left: 20px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>選擇器的各種組合方式</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <button type="button" onclick="toHome()">回入口目錄頁</button>
+  </header>
+  <main>
+    <h1>選擇器的各種組合方式</h1>
+    <div class="box test-1">
+      <span>後代選擇器（空格）：所有 .test1 後的 span 會變綠色背景</span>
+      <code>
+        .test-1 span {
+          background-color: #00575750;
+        }
+      </code>
+      <ul>
+        <li>子層選擇器（>）：有父子關係的 ul & li（父與子），子 li 會變紅色文字</li>
+        <li><span>第三</span></li>
+      </ul>
+      <span>我也是綠底的</span>
+    </div>
+    <div class="box test-2">
+      <span>通用兄弟選擇器（~）：同個父層的 p 後的 span 會變紫粉紅色背景</span>
+      <p>第一區</p>
+      <code>
+        .test-2 p~span {
+          background-color: #FF44FF;
+        }
+      </code>
+      <span>是我</span>
+      <p>
+        <span>第四區</span>
+      </p>
+      <span>是我</span>
+    </div>
+
+    <div class="box test-3">
+      <p>相鄰兄弟選擇器（+）：同個父節點 .box 中，緊跟在 p 後的 div 會變黃底。</p>
+      <span>第一區</span>
+      <code>
+        .box p+div {
+          background-color: #eccc88;
+        }
+      </code>
+      <p>第一區</p>
+      <div>是我</div>
+      <div>第三區</div>
+      <p>第四區</p>
+      <div>是我</div>
+    </div>
+
+    <div class="box test-4">
+      <div class="test-5">嗨
+        <div class="test-6">在 嗨 裡面</div>
+      </div>
+      <span>一句話</span>
+      <h3>你好</h3>
+    </div>
+
+  </main>
+
+  <script>
+    function toHome() {
+      history.back();
+    };
+  </script>
+</body>
+
+</html>

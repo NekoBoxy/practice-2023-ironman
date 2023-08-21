@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>偽類 psuedo-class</title>
+  <link rel="stylesheet" href="../chapterstyle.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <button type="button" onclick="toHome()">回入口目錄頁</button>
+  </header>
+  <main>
+    <h1>常見的偽類 psuedo-class 練習</h1>
+    <div class="box">
+      <h2>輸入／編輯類</h2>
+      <div class="inner-box">
+        <h3>:read-only</h3>
+        <p class="read-only">我會變 aquamarine 色</p>
+      </div>
+      <div class="inner-box">
+        <h3>:disabled</h3>
+        <form>
+          <div>
+            <label>喜歡的動物：
+              <select name="animal">
+                <optgroup label="大型動物">
+                  <option value="lion">獅子</option>
+                  <option value="cow">牛</option>
+                </optgroup>
+                <optgroup label="中小型動物">
+                  <option value="otter">獺</option>
+                  <option value="cat">貓咪</option>
+                </optgroup>
+              </select>
+            </label>
+          </div>
+          <div>
+            <label>其他
+              <input type="text">
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="inner-box">
+        <h3>:read-only</h3>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <script>
+    function toHome() {
+      history.back();
+    };
+  </script>
+</body>
+
+</html>
