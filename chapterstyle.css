@@ -22,6 +22,10 @@ h5 {
   margin-bottom: 10px;
 }
 
+.inner-box {
+  margin-left: 1.25rem;
+}
+
 .box {
   border: 1px solid black;
   margin-bottom: 20px;
