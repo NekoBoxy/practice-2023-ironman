@@ -127,6 +127,41 @@
       <span>也可以到 codepen 試試
         <a href="https://codepen.io/nekoboxy/pen/xxmbQvL?editors=1100" target="_blank">點我</a>
       </span>
+      <h2>結構類</h2>
+      <h3>:hover</h3>
+      <div class="inner-box">
+        <button type="button" class="test-hover">滑鼠來</button>
+      </div>
+      <h3>:active</h3>
+      <div class="inner-box">
+        <span>這是一個結合 <code>:hover</code> 跟 <code>:active</code> 的<a>例子</a>，點看看吧</span>
+      </div>
+      <h3>:focus</h3>
+      <div class="inner-box">
+        <input type="text" placeholder="點我嘛~">
+        <div class="test-focus">
+          <label>喜歡的動物：
+            <select name="animals">
+              <option>請選擇</option>
+              <option value="lion">獅子</option>
+              <option value="otter" selected>獺</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <h2>功能類</h2>
+      <h3>:is()</h3>
+      <div class="inner-box test-is">
+        <div class="box1">
+          <h5>嗨</h5>
+          <div class="box2">
+            <h5>嗨</h5>
+            <div class="box3">
+              <h5>嗨</h5>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 

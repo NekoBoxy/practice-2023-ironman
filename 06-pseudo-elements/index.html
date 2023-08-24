@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>偽元素們</title>
+  <link rel="stylesheet" href="../chapterstyle.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <button type="button" onclick="toHome()">回入口目錄頁</button>
+  </header>
+  <main>
+    <h1>偽元素們</h1>
+    <div class="box">
+      <h2>::after & ::before</h2>
+      <div class="inner-box test-after">
+        <span>嗨你好</span>
+        <span>嗨你好</span>
+        <span>嗨你好</span>
+        <p>滑鼠移上來</p>
+      </div>
+      <div class="inner-box test-mix">
+        <span>想要兩個 div 間</span>
+        <span>有一條槓槓</span>
+        <div data-text="試做文字特效">試做文字特效</div>
+      </div>
+      <h2>::marker</h2>
+      <div class="inner-box test-marker">
+        <ul>
+          <li>你好</li>
+          <li>我是</li>
+          <li>海獺</li>
+        </ul>
+      </div>
+      <h2>::selection</h2>
+      <div class="inner-box test-selection">
+        <span>請用滑鼠選取我</span>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function toHome() {
+      history.back();
+    };
+  </script>
+</body>
+
+</html>

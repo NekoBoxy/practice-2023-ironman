@@ -1,12 +1,3 @@
-h2,
-h3 {
-  margin-top: 15px;
-}
-
-.inner-box div {
-  margin-bottom: 8px;
-}
-
 /* 下面兩個結果一樣 */
 p[class="read-only"]:read-only {
   background-color: aquamarine;
@@ -60,5 +51,33 @@ div:target {
 .test-nth-anzero p:nth-child(2n+0),
 .test-nth-anfour p:nth-child(4n+1) {
   background-color: rgb(151, 82, 101);
+  color: white;
+}
+
+.test-hover:hover {
+  background-color: brown;
+  color: white;
+}
+
+.inner-box>span:hover {
+  background-color: aquamarine;
+}
+
+span>a:active {
+  color: aliceblue;
+  font-weight: 900;
+  background-color: darkgreen;
+}
+
+.inner-box>input:focus {
+  background-color: aquamarine;
+}
+
+.test-focus select:focus {
+  background-color: burlywood;
+}
+
+.test-is :is(.box1, .box2, .box3) h5 {
+  background-color: darkgreen;
   color: white;
 }
