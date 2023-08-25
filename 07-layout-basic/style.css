@@ -1,0 +1,34 @@
+:is(.test-none, .test-block, .test-block, .test-inline, .test-inline-block) :is(span, div) {
+  margin: 10px;
+  padding: 5px;
+  background-color: aquamarine;
+}
+
+.test-none span:nth-child(2) {
+  display: none;
+}
+
+.test-block span:nth-of-type(4) {
+  display: block;
+  background-color: cadetblue;
+}
+
+.test-inline div:nth-of-type(1),
+.test-inline div:nth-last-child(2),
+.test-inline div:nth-last-child(3) {
+  display: inline;
+  background-color: cadetblue;
+}
+
+.test-inline-block div {
+  width: 150px;
+  height: 60px;
+  border: 1px solid black;
+}
+
+.test-inline-block div:nth-child(2),
+.test-inline-block div:nth-child(3),
+.test-2block div {
+  display: inline-block;
+  background-color: cadetblue;
+}

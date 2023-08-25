@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layout</title>
+  <link rel="stylesheet" href="../chapterstyle.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <button type="button" onclick="toHome()">回入口目錄頁</button>
+  </header>
+  <main>
+    <h1>layout</h1>
+    <div class="box">
+      <h2>display</h2>
+      <h3>none</h3>
+      <p>下面有三個 span</p>
+      <div class="inner-box test-none">
+        <span>可是你只看的到第一個</span>
+        <span>第二個</span>
+        <span>跟第三個</span>
+      </div>
+      <h3>block&inline</h3>
+      <div class="inner-box test-block test-inline">
+        <span><code>span</code></span>
+        <div><code>div{display: inline;}</code></div>
+        <span><code>span</code></span>
+        <span><code>span</code></span>
+        <div><code>div</code></div>
+        <span><code>span{display: block;}</code></span>
+        <div><code>div</code></div>
+        <span><code>span</code></span>
+        <span><code>span</code></span>
+        <div><code>div{display: inline;}</code></div>
+        <div><code>div{display: inline;}</code></div>
+        <div><code>div</code></div>
+      </div>
+      <h3>inline-block</h3>
+      <div class="inner-box test-inline-block">
+        <div><code>div</code></div>
+        <div><code>div{display: inline-block;}</code></div>
+        <div><code>div{display: inline-block;}</code></div>
+        <div><code>div</code></div>
+      </div>
+      <h3>注意：並排的 inline-block 間會有空白</h3>
+      <div class="inner-box test-2block">
+        <div>第一行</div>
+        <div>第二行</div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function toHome() {
+      history.back();
+    };
+  </script>
+</body>
+
+</html>
