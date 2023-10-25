@@ -1,0 +1,21 @@
+.test-box {
+  font-size: 2rem;
+  border: 5px dotted pink;
+  padding: 10px;
+  margin: 15px;
+}
+
+.test-default,
+.test-content {
+  width: 300px;
+  height: 150px;
+  padding: 20px;
+  margin: 30px;
+  background-color: gray;
+  border: 5px solid blue;
+  font-size: 1.5rem;
+}
+
+.test-content {
+  box-sizing: border-box;
+}

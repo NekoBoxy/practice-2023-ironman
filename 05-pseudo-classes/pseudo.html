@@ -48,10 +48,10 @@
         <div>
           <ul>
             <li>
-              <a href="#para">去 A</a>
+              <a href="#para">去 p</a>
             </li>
             <li>
-              <a href="#block">去 B</a>
+              <a href="#block">去 div</a>
             </li>
             <li>
               <a href="notdefined">找不到目標</a>
@@ -60,7 +60,13 @@
         </div>
         <div>
           <p id="para">我是一個 p</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, nemo accusantium suscipit optio rem
+            dolores odio repudiandae! Molestiae iusto delectus animi numquam perferendis? Aspernatur repudiandae, quae
+            voluptas dolore eos ipsa?</p>
           <div id="block">我是一個div</div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, nemo accusantium suscipit optio rem
+            dolores odio repudiandae! Molestiae iusto delectus animi numquam perferendis? Aspernatur repudiandae, quae
+            voluptas dolore eos ipsa?</p>
         </div>
       </div>
       <h2>結構用</h2>
@@ -134,7 +140,7 @@
       </div>
       <h3>:active</h3>
       <div class="inner-box">
-        <span>這是一個結合 <code>:hover</code> 跟 <code>:active</code> 的<a>例子</a>，點看看吧</span>
+        <span>這是一個結合 <code>:hover</code> 跟 <code>:active</code> 的<a>例子</a>，點看看前面黃底色的字吧</span>
       </div>
       <h3>:focus</h3>
       <div class="inner-box">
@@ -167,7 +173,7 @@
 
   <script>
     function toHome() {
-      history.back();
+      location.href = "/";
     };
   </script>
 </body>

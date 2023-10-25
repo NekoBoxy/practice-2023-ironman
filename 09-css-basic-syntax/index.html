@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>基本語法</title>
+  <link rel="stylesheet" href="../chapterstyle.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <button type="button" onclick="toHome()">回入口目錄頁</button>
+  </header>
+  <main>
+    <h1>基本語法</h1>
+    <div class="box">
+      <h2>font</h2>
+      <h3>font-family、font-size、font-weight、line-height</h3>
+      <div class="inner-box test-font">
+        <p>此頁套用的字型是 google 的 Noto Sans TC</p>
+        <p><code>font-style: italic;</code></p>
+        <p><code>font-size: larger; font-weight: 800;</code></p>
+        <p><code>font-size: 3rem;</code></p>
+        <div>
+          <span>Itaque Tempora Tempore Ex.</span>
+          Velit impedit atque animi.<code>font-size: 1.25rem;</code>
+          <span>Itaque tempora tempore ex. Velit impedit atque animi.</span>
+          <div><code>line-height: 100px; font-size: 2em;</code></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function toHome() {
+      location.href = "/";
+    };
+  </script>
+</body>
+
+</html>

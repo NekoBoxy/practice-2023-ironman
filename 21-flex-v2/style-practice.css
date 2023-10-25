@@ -1,0 +1,53 @@
+.test-justify-start {
+  justify-content: flex-start;
+}
+
+.test-justify-end {
+  justify-content: flex-end;
+}
+
+.test-justify-center {
+  justify-content: center;
+}
+
+.test-justify-between {
+  justify-content: space-between;
+}
+
+.test-justify-around {
+  justify-content: space-around;
+}
+
+.test-justify-evenly {
+  justify-content: space-evenly;
+}
+
+.test-align-start {
+  align-items: flex-start;
+}
+
+.test-align-end {
+  align-items: flex-end;
+}
+
+.test-align-center {
+  align-items: center;
+}
+
+/* baseline 的效果做不出來QQ */
+.test-align-baseline .item:nth-child(2n+1) {
+  width: 100px;
+  height: 200px;
+  font-size: 18px;
+}
+
+.test-align-baseline .item:nth-child(2n+2) {
+  width: 100px;
+  height: 100px;
+  font-size: 18px;
+}
+
+.test-align-baseline {
+  height: 300px;
+  /* align-items: baseline; */
+}

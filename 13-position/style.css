@@ -1,0 +1,94 @@
+div {
+  padding: 10px;
+  margin: 10px;
+}
+
+p {
+  margin-top: 10px;
+}
+
+.box {
+  width: 500px;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+}
+
+/* test-relative */
+.test-relative div:nth-of-type(2) {
+  position: relative;
+  left: 50px;
+}
+
+.test-relative div:nth-of-type(3) {
+  position: relative;
+  right: -50px;
+}
+
+.test-relative div:nth-of-type(4) {
+  position: relative;
+  bottom: 50px;
+  z-index: -1;
+}
+
+/* test-absolute */
+.test-absolute div:nth-of-type(2) {
+  position: absolute;
+  left: 50px;
+}
+
+.test-absolute div:nth-of-type(4) {
+  position: absolute;
+  top: 50px;
+}
+
+/* test-relative + test-absolute */
+.test-absolute-relative {
+  position: relative;
+}
+
+.test-absolute-relative div:nth-of-type(2) {
+  position: absolute;
+  left: 50px;
+  opacity: .75;
+}
+
+/* test-fixed */
+.test-fixed div:nth-of-type(2) {
+  position: fixed;
+  width: 300px;
+  top: 50px;
+  right: 0px;
+  opacity: .75;
+}
+
+/* test-sticky */
+.test-sticky {
+  width: 500px;
+  position: sticky;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  bottom: 0px;
+}
+
+
+
+
+/* 練習一下 */
+.inner {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+/* 試做個滾動固定的 navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+}
+
+
+/* 試做個 footer */
+.footer {
+  position: sticky;
+  bottom: -20px;
+}

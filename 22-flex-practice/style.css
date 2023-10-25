@@ -1,0 +1,39 @@
+h1,
+h2,
+h3,
+p,
+span {
+  text-align: center;
+}
+
+.container {
+  border: 1px solid black;
+  width: 800px;
+  height: 300px;
+  margin: 50px auto;
+  display: flex;
+}
+
+.box {
+  width: 100%;
+  height: 50%;
+  background-color: cadetblue;
+  margin: 10px;
+  font-size: 36px;
+}
+
+.test-text-center {
+  /* Y 軸方向 */
+  line-height: 150px;
+  /* X 軸方向*/
+  text-align: center;
+}
+
+.test-align-items {
+  /* 要下在容器上 */
+  align-items: center;
+}
+
+.test-align-items .box {
+  text-align: center;
+}

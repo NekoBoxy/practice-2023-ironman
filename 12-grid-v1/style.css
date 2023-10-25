@@ -1,0 +1,146 @@
+/* 共用格式 */
+.box {
+  width: 90%;
+  margin: 10px 30px;
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  /* outline: 2px solid yellow; */
+}
+
+.box>span {
+  font-size: 1.5rem;
+}
+
+:is(div[class*="test"], div[class*="auto"]) {
+  display: grid;
+  /* gap: 10px; */
+  padding: 10px;
+  font-size: 50px;
+  width: 600px;
+  height: 400px;
+  margin: 20px auto;
+  outline: 3px solid black;
+}
+
+div[class*="test"] div:nth-of-type(1) {
+  grid-area: b1;
+  background-color: #faa;
+}
+
+div[class*="test"] div:nth-of-type(2) {
+  grid-area: b2;
+  background-color: #afa;
+}
+
+div[class*="test"] div:nth-of-type(3) {
+  grid-area: b3;
+  background-color: #aaf;
+}
+
+div[class*="test"] div:nth-of-type(4) {
+  grid-area: b4;
+  background-color: #fa3;
+}
+
+div[class*="test"] div:nth-of-type(5) {
+  grid-area: b5;
+  background-color: #3af;
+}
+
+div[class*="test"] div:nth-of-type(6) {
+  grid-area: b6;
+  background-color: #a3f;
+}
+
+/* gap */
+.test-gap {
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'b1 b2 b3 b4'
+    'b5 b6 . .';
+  row-gap: 10px;
+  column-gap: 30px;
+}
+
+
+/* grid-template-areas */
+.test-area,
+.test-area-span {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 100px) auto;
+}
+
+.test-area {
+  grid-template-areas:
+    "b1 b1 b3 b3"
+    "b1 b1 b3 b3"
+    "b2 b2 b4 b4"
+    "b2 b2 b4 b4";
+}
+
+/* 空白區域 */
+.test-area-span {
+  grid-template-areas:
+    "b1 b1 b3 b3"
+    "b1 b1 b3 b3"
+    "b2 b2 . ."
+    "b2 b2 . b4";
+}
+
+/* repeat */
+.test-repeat {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "b1 b1 b3 b3"
+    "b1 b1 b3 b3"
+    "b2 b2 b4 b4";
+}
+
+/* test auto-row */
+/* 設定好每個元素的背景色 */
+div[class*="auto"] div:nth-of-type(1) {
+  background-color: #faa;
+}
+
+div[class*="auto"] div:nth-of-type(2) {
+  background-color: #afa;
+}
+
+div[class*="auto"] div:nth-of-type(3) {
+  background-color: #aaf;
+}
+
+div[class*="auto"] div:nth-of-type(4) {
+  background-color: #fa3;
+}
+
+div[class*="auto"] div:nth-of-type(5) {
+  background-color: #3af;
+}
+
+div[class*="auto"] div:nth-of-type(6) {
+  background-color: #a3f;
+}
+
+.auto-row {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* 使用自動 row，值可以自由設定 */
+  grid-auto-rows: auto;
+}
+
+/* justify-content */
+
+
+
+
+/* 意義不明捨棄區 */
+/* .test-unknow {
+  grid-template-columns: [b1]1fr [b2]1fr [b3] 11fr [b4]1fr;
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+    'b1 b2 b3 b4'
+    'b5 b6 . .';
+} */

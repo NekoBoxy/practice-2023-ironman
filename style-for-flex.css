@@ -1,0 +1,41 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+main {
+  width: 100%;
+  padding: 20px;
+}
+
+.box {
+  border: 1px solid black;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.inner-box div {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+h1,
+.inner-box {
+  margin-bottom: 20px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 10px;
+}
+
+h2,
+h3 {
+  margin-top: 15px;
+}

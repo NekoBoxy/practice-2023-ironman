@@ -1,0 +1,268 @@
+.inner-box div {
+  width: 100px;
+  font-size: 2rem;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: cadetblue;
+}
+
+/* 這幾種 class 開頭的 div 或指定 class，皆套用 flex */
+div[class*="test-flex"],
+div[class*="test-justify"],
+div[class*="test-align"] {
+  display: flex;
+}
+
+/* 幫這層加上高度，子層才有高度可拉伸 */
+.test-default-align {
+  display: flex;
+  height: 300px;
+}
+
+/* 這兩種開頭的 class 下的 div 皆套用高度 100px */
+:is(div[class*="test-flex"], div[class*="test-justify"]) div {
+  height: 100px;
+}
+
+.test-flex-y-reverse {
+  flex-direction: column-reverse;
+}
+
+.test-justify-end {
+  justify-content: flex-end;
+}
+
+.test-justify-between {
+  justify-content: space-between;
+}
+
+.test-justify-around {
+  justify-content: space-around;
+}
+
+.test-justify-evenly {
+  justify-content: space-evenly;
+}
+
+/* align-items */
+/* div 的 class 若符合 test-align 的套用樣式 */
+/* 容器 */
+div[class*="test-align"] {
+  width: 500px;
+  height: 100px;
+}
+
+
+/* flex items */
+div[class*="test-align"] div:first-child {
+  height: 50px;
+}
+
+div[class*="test-align"] div:nth-child(2) {
+  height: 70px;
+}
+
+div[class*="test-align"] div:last-child {
+  height: 90px;
+}
+
+.test-align-start {
+  align-items: flex-start;
+}
+
+.test-align-center {
+  align-items: center;
+}
+
+.test-align-baseline {
+  align-items: baseline;
+}
+
+/* flex-grow & flex-shrink 共用的樣式 */
+.test-grow,
+.test-shrink {
+  display: flex;
+  border: 2px solid black;
+}
+
+.test-grow {
+  width: 500px;
+}
+
+.test-shrink {
+  width: 300px;
+}
+
+:is(.test-grow, .test-shrink) div {
+  width: 100px;
+}
+
+/* flex-grow */
+.test-grow div:first-child {
+  flex-grow: 1;
+}
+
+.test-grow div:nth-child(2) {
+  flex-grow: 2;
+}
+
+.test-grow div:last-child {
+  flex-grow: 1.5;
+}
+
+/* flex-shrink */
+.test-shrink div:first-child {
+  flex-shrink: 1;
+}
+
+.test-shrink div:nth-child(2) {
+  flex-shrink: 0.3;
+}
+
+.test-shrink div:last-child {
+  flex-shrink: 0.5;
+}
+
+/* flex-basis, code by gpt */
+.test-basis {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.test-basis div {
+  /* 初始大小為 100 像素 */
+  flex-basis: 100px;
+  border: 2px solid red;
+  background-color: transparent;
+  padding: 10px;
+}
+
+/* 練習一下 code by gpt*/
+/* e.g. 1. 彈性卡片 */
+.test-card {
+  display: flex;
+  justify-content: space-between;
+  /* 自動換行 */
+  flex-wrap: wrap;
+  /* 最大寬度限制 */
+  max-width: 800px;
+  /* 水平居中 */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.test-card div {
+  flex: 1;
+  background-color: cadetblue;
+  border: 1px solid black;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+}
+
+/* e.g. 2. navbar */
+.test-navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 10px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+  .test-navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* e.g. 3. rwd 卡片*/
+.test-card-rwd {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.test-card-rwd div {
+  box-sizing: border-box;
+  flex: 1 0 calc(33.33% - 10px);
+  /* 三張卡片一行，間距 10px */
+  margin: 5px;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .test-card-rwd div {
+    flex: 1 0 calc(50% - 10px);
+    /* 兩張卡片一行，間距 10px */
+  }
+}
+
+@media (max-width: 480px) {
+  .test-card-rwd div {
+    flex: 1 0 calc(100% - 10px);
+    /* 一張卡片一行，間距 10px */
+  }
+}
+
+
+/* 自己動手做 */
+/* 自己做 flex 卡片 */
+ul,
+li {
+  margin-left: 20px;
+}
+
+.test-card-02 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #b9b9b9;
+}
+
+.test-card-02 div {
+  background-color: cadetblue;
+  padding: 20px;
+  margin: 20px 30px;
+  width: 350px;
+  height: 400px;
+  text-align: center;
+  /* flex-grow: 1; */
+  flex-shrink: 3;
+
+}
+
+/* 自己做 navbar */
+.test-navbar-02 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 20px;
+}
+
+.test-navbar-02 a {
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: 700;
+  padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+  .test-navbar-02 {
+    align-items: center;
+    flex-direction: column;
+  }
+}

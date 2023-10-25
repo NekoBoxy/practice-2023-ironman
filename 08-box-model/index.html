@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>選擇器的各種組合方式</title>
-  <link rel="stylesheet" href="../style-for-grid-v2.css">
+  <title>box model</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,8 +13,22 @@
     <button type="button" onclick="toHome()">回入口目錄頁</button>
   </header>
   <main>
-    <h1>選擇器的各種組合方式</h1>
+    <h1>box model</h1>
     <div class="box">
+      <h2>box-model 示意</h2>
+      <div class="inner-box test-box">
+        content
+      </div>
+    </div>
+    <div class="box">
+      <h2>box-sizing</h2>
+      <div class="test-default">
+        <code>box-sizing: content-box;</code>
+      </div>
+      <div class="test-content">
+        <code>box-sizing: border-box;</code>
+      </div>
+    </div>
     </div>
   </main>
 

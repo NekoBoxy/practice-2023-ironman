@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex V2</title>
+  <link rel="stylesheet" href="./style-form.css">
+  <link rel="stylesheet" href="./style-practice.css">
+</head>
+
+<body>
+  <header>
+    <button type="button" onclick="toHome()">回入口目錄頁</button>
+  </header>
+  <main>
+    <h1>Flex V2</h1>
+    <!-- justify-content -->
+    <div>
+      <h2>justify-content：元素在主軸上的對齊方式</h2>
+      <h3>justify-content：flex-start</h3>
+      <div class="container test-justify-start">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+        <div class="item g">G</div>
+        <div class="item h">H</div>
+        <div class="item i">I</div>
+      </div>
+      <h3>justify-content：flex-end</h3>
+      <div class="container test-justify-end">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+        <div class="item g">G</div>
+        <div class="item h">H</div>
+        <div class="item i">I</div>
+      </div>
+      <h3>justify-content：center</h3>
+      <div class="container test-justify-center">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+        <div class="item g">G</div>
+        <div class="item h">H</div>
+        <div class="item i">I</div>
+      </div>
+      <h3>justify-content：space-between</h3>
+      <div class="container test-justify-between">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+        <div class="item g">G</div>
+        <div class="item h">H</div>
+        <div class="item i">I</div>
+      </div>
+      <h3>justify-content：space-around</h3>
+      <div class="container test-justify-around">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+        <div class="item g">G</div>
+        <div class="item h">H</div>
+        <div class="item i">I</div>
+      </div>
+      <h3>justify-content：space-evenly</h3>
+      <div class="container test-justify-evenly">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+        <div class="item g">G</div>
+        <div class="item h">H</div>
+        <div class="item i">I</div>
+      </div>
+    </div>
+    <!-- align-items -->
+    <div>
+      <h2>align-items：元素在交叉軸上的對齊方式</h2>
+      <h3>align-items：stretch(拉伸；為預設值)</h3>
+      <div class="container">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+        <div class="item g">G</div>
+        <div class="item h">H</div>
+        <div class="item i">I</div>
+      </div>
+      <h3>align-items：flex-start</h3>
+      <div class="container test-align-start">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+        <div class="item g">G</div>
+        <div class="item h">H</div>
+        <div class="item i">I</div>
+      </div>
+      <h3>align-items：flex-end</h3>
+      <div class="container test-align-end">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+        <div class="item g">G</div>
+        <div class="item h">H</div>
+        <div class="item i">I</div>
+      </div>
+      <h3>align-items：center</h3>
+      <div class="container test-align-center">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+        <div class="item g">G</div>
+        <div class="item h">H</div>
+        <div class="item i">I</div>
+      </div>
+      <h3>align-items：center 加 justify-content: center 就會得到水平垂直都置中的排列</h3>
+      <div class="container test-align-center test-justify-center">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+        <div class="item g">G</div>
+        <div class="item h">H</div>
+        <div class="item i">I</div>
+      </div>
+      <h3>align-items：baseline</h3>
+      <h4 style="text-align: center; margin-bottom: 5px;">效果做不出來QQ</h4>
+      <div class="container test-align-baseline">
+        <div class="item a">consectetur adipisicing elit.</div>
+        <div class="item b">Lorem ipsum dolor sit amet</div>
+        <div class="item c">Beatae quae possimus doloremque dicta</div>
+        <div class="item d">iure ea sapiente?</div>
+        <div class="item e">Possimus quae at.</div>
+        <div class="item f">F</div>
+        <div class="item g">laboriosam alias deserunt dolorum obcaecati?</div>
+        <div class="item h">H</div>
+        <div class="item i">Cum animi voluptate voluptates iusto dolorum</div>
+      </div>
+    </div>
+    <h3>justify-content：</h3>
+    <div class="container test-justify-center">
+      <div class="item a">A</div>
+      <div class="item b">B</div>
+      <div class="item c">C</div>
+      <div class="item d">D</div>
+      <div class="item e">E</div>
+      <div class="item f">F</div>
+      <div class="item g">G</div>
+      <div class="item h">H</div>
+      <div class="item i">I</div>
+    </div>
+    <h3>justify-content：</h3>
+    <div class="container test-justify-center">
+      <div class="item a">A</div>
+      <div class="item b">B</div>
+      <div class="item c">C</div>
+      <div class="item d">D</div>
+      <div class="item e">E</div>
+      <div class="item f">F</div>
+      <div class="item g">G</div>
+      <div class="item h">H</div>
+      <div class="item i">I</div>
+    </div>
+    <h3>justify-content：</h3>
+    <div class="container test-justify-center">
+      <div class="item a">A</div>
+      <div class="item b">B</div>
+      <div class="item c">C</div>
+      <div class="item d">D</div>
+      <div class="item e">E</div>
+      <div class="item f">F</div>
+      <div class="item g">G</div>
+      <div class="item h">H</div>
+      <div class="item i">I</div>
+    </div>
+    <h3>justify-content：</h3>
+    <div class="container test-justify-center">
+      <div class="item a">A</div>
+      <div class="item b">B</div>
+      <div class="item c">C</div>
+      <div class="item d">D</div>
+      <div class="item e">E</div>
+      <div class="item f">F</div>
+      <div class="item g">G</div>
+      <div class="item h">H</div>
+      <div class="item i">I</div>
+    </div>
+    <h3>justify-content：</h3>
+    <div class="container test-justify-center">
+      <div class="item a">A</div>
+      <div class="item b">B</div>
+      <div class="item c">C</div>
+      <div class="item d">D</div>
+      <div class="item e">E</div>
+      <div class="item f">F</div>
+      <div class="item g">G</div>
+      <div class="item h">H</div>
+      <div class="item i">I</div>
+    </div>
+    <h3>justify-content：</h3>
+    <div class="container test-justify-center">
+      <div class="item a">A</div>
+      <div class="item b">B</div>
+      <div class="item c">C</div>
+      <div class="item d">D</div>
+      <div class="item e">E</div>
+      <div class="item f">F</div>
+      <div class="item g">G</div>
+      <div class="item h">H</div>
+      <div class="item i">I</div>
+    </div>
+  </main>
+
+  <script>
+    function toHome() {
+      location.href = "/";
+    };
+  </script>
+</body>
+
+</html>

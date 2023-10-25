@@ -1,0 +1,27 @@
+/* 練習開始 code from mdn */
+.test-jusitify {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  gap: 10px;
+}
+
+.test-jusitify .a {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.test-jusitify .b {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+
+/* 簡單的 grid */
+.test-01 {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}

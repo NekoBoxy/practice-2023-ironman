@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM event 的操作</title>
+  <link rel="stylesheet" href="../style-for-grid-v2.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <button type="button" onclick="toHome()">回入口目錄頁</button>
+  </header>
+  <main>
+    <h1>DOM event 的操作</h1>
+    <div class="box">
+      <h3>addEventListener 的 option 與基本使用</h3>
+      <p>嗨你好</p>
+      <p>我是</p>
+      <button id="btn">click</button>
+      <p>海獺</p>
+    </div>
+    <div class="box">
+      <h3>event.target 的操作</h3>
+      <p>code 來自 GPT</p>
+      <button id="button1">Button 1</button>
+      <button id="button2">Button 2</button>
+      <button id="button3">Button 3</button>
+      <p id="output"></p>
+      <h3>event.target.value 的實作：取值</h3>
+      <input type="text" id="input" placeholder="輸入一些字">
+      <h3>event.target.style 實作：更改目標的 CSS 樣式</h3>
+      <div class="color-box">點我換色</div>
+      <h3>event.target.files 的實作</h3>
+      <p>Q：請寫一個 HTML 表單，包含一個文件上傳的 input 元素。當使用者選擇文件後，請使用 JavaScript 來顯示所選文件的名稱和大小。</p>
+      <input type="file" id="fileInput">
+      <div id="output"></div>
+    </div>
+  </main>
+  <script src="./01.js"></script>
+  <script>
+    function toHome() {
+      location.href = "/";
+    };
+  </script>
+</body>
+
+</html>

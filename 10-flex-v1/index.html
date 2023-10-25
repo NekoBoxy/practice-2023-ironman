@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexbox v1</title>
+  <link rel="stylesheet" href="../style-for-flex.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <button type="button" onclick="toHome()">回入口目錄頁</button>
+  </header>
+  <main>
+    <h1>flexbox v1</h1>
+    <h2>flex-direction</h2>
+    <div class="box">
+      <h3>未設定</h3>
+      <span>不設定 flex，div 會垂直排列。</span>
+      <div class="inner-box">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </div>
+      <h3><code>display: flex</code></h3>
+      <span>設定 flex 後，flex item 預設為水平排列（row）</span>
+      <div class="inner-box test-flex-x">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </div>
+      <h3><code>display: flex; flex-direction: column-reverse;</code></h3>
+      <span>設定 flex 後，再設定 flex-direction: column-reverse，這樣 flex item 們就會逆向排列。
+      </span>
+      <div class="inner-box test-flex-y-reverse">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </div>
+    </div>
+    <h2>justify-content</h2>
+    <div class="box">
+      <h3>flex-end：整坨會往主軸的終點靠過去</h3>
+      <div class="inner-box test-justify-end">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </div>
+      <h3>space-between</h3>
+      <div class="inner-box test-justify-between">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+      </div>
+      <h3>space-around</h3>
+      <div class="inner-box test-justify-around">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </div>
+      <h3>space-evenly</h3>
+      <div class="inner-box test-justify-evenly">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </div>
+    </div>
+    <h2>align-items</h2>
+    <div class="box">
+      <h3>stretch（預設值）</h3>
+      <p>flex item 們的高度被自動拉長以填滿交叉軸</p>
+      <p>若 flex container 有給定高度，flex item 未給，stretch 會自動拉伸子層高度</p>
+      <p>為了展示出拉伸的效果，故 flex item 們皆沒設高度</p>
+      <div class="inner-box test-default-align">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </div>
+      <h3>flex-start</h3>
+      <div class="inner-box test-align-start">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </div>
+      <h3>center</h3>
+      <div class="inner-box test-align-center">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </div>
+      <h3>baseline</h3>
+      <div class="inner-box test-align-baseline">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </div>
+    </div>
+    <h2>flex-grow</h2>
+    <div class="box">
+      <h3>實作與理解</h3>
+      <!-- <p>content width=100px</p>
+      <p>第一個 div <code>flex-grow: 1;</code></p>
+      <p>第二個 div <code>flex-grow: 2;</code></p>
+      <p>第三個 div <code>flex-grow: 1.5;</code></p>
+      <p>未設定grow前，右側多餘空間為：500-(100*3)=200</p>
+      <p style="color: red;">還要記得扣掉三個 flex item 的左右 margin：200-10*6=140</p>
+      <p>所以實際可用空間為 140 px</p>
+      <p>每一份等於 140/4.5=31.11</p>
+      <p>增長完的實際寬度為 130.22+160.46+145.33=436</p>
+      <p>加上 flex item 左右 margin：436+10*6=496</p>
+      <ul>
+        <li>width=100+31.11*1=131.11／差131.11(計算)-130.22(實際)=0.89</li>
+        <li>width=100+31.11*2=162.22／差162.22-160.45=1.77</li>
+        <li>width=100+31.11*1.5=146.665／差146.665-145.33=1.335</li>
+      </ul> -->
+      <p>容器寬 500，元素寬 100</p>
+      <div class="inner-box test-grow">
+        <div>130.22</div>
+        <div>160.45</div>
+        <div>145.33</div>
+      </div>
+    </div>
+    <h2>flex-shrink</h2>
+    <div class="box">
+      <p>為了展示效果，故意減少容器的寬，使元素被逼的收縮。</p>
+      <p>容器寬 300，元素寬 100</p>
+      <div class="inner-box test-shrink">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </div>
+    </div>
+    <h2>flex-basis</h2>
+    <div class="box">
+      <div class="inner-box test-basis">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </div>
+    </div>
+    <h2>練習一下｜code by gpt</h2>
+    <div class="box">
+      <h3>e.g. 1. card 的彈性排版</h3>
+      <div class="test-card">
+        <div>卡片</div>
+        <div>卡片</div>
+        <div>卡片</div>
+      </div>
+    </div>
+    <div class="box">
+      <h3>e.g. 2. 響應式 navbar 排版</h3>
+      <nav class="test-navbar">
+        <a href="#" class="nav-item">首頁</a>
+        <a href="#" class="nav-item">關於我們</a>
+        <a href="#" class="nav-item">服務</a>
+        <a href="#" class="nav-item">聯絡我們</a>
+      </nav>
+    </div>
+    <div class="box">
+      <h3>e.g. 3. 偷跑 rwd 卡片</h3>
+      <div class="test-card-rwd">
+        <div>卡片</div>
+        <div>卡片</div>
+        <div>卡片</div>
+        <div>卡片</div>
+        <div>卡片</div>
+        <div>卡片</div>
+      </div>
+    </div>
+    <h2>試著自己來</h2>
+    <div class="box">
+      <h3>[X] 試做彈性卡片</h3>
+      <ul>
+        <li>替卡片設了 flex-grow: 1，有剩餘空間時，將這些空間分配給卡片以長大</li>
+        <li>設定容器的最大寬度為 800px，當元素寬度大於容器寬度時，flex-wrap: wrap 會換行</li>
+        <li>心得：</li>
+        <li>想要做響應式卡片，寬度不足時，卡片掉下去，一行一張，但做不出來</li>
+        <li>只做出了寬度不足時會自動換行的效果，卡片大小還控制不好</li>
+      </ul>
+      <div class="test-card-02">
+        <div>卡片</div>
+        <div>卡片</div>
+        <div>卡片</div>
+      </div>
+    </div>
+    <div class="box">
+      <h3>[O] 試做 navbar</h3>
+      <ul>
+        <li>除了基本設定與容器內文字置中之外，只要用 media query 設斷點 max-width: 768px</li>
+        <li>在斷點內對容器設定<code>flex-direction: column; align-items: center;</code></li>
+        <li>就會在斷點時自動切換 container 內的元素排列方式為 column</li>
+        <li>其他 flex 設定都不用XD</li>
+      </ul>
+      <nav class="test-navbar-02">
+        <a href="#" class="test-nav-item">首頁</a>
+        <a href="#" class="test-nav-item">關於我們</a>
+        <a href="#" class="test-nav-item">服務</a>
+        <a href="#" class="test-nav-item">聯絡我們</a>
+      </nav>
+    </div>
+  </main>
+
+  <script>
+    function toHome() {
+      location.href = "/";
+    };
+  </script>
+</body>
+
+</html>

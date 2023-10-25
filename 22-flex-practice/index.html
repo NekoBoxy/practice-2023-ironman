@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex 練習們</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <button type="button" onclick="toHome()">回入口目錄頁</button>
+  </header>
+  <main>
+    <h1>Flex 練習們</h1>
+    <p>參考資訊：<a href="https://w3c.hexschool.com/flexbox/2186a786">Flexbox 是甚麼 - 六角校長</a></p>
+    <h2>置中：文字 - 1</h2>
+    <div class="container">
+      <div class="box test-text-center">A</div>
+      <div class="box test-text-center">B</div>
+      <div class="box test-text-center">C</div>
+      <div class="box test-text-center">D</div>
+      <div class="box test-text-center">E</div>
+    </div>
+    <h2>置中：文字 - 2</h2>
+    <div class="container test-align-items">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+    </div>
+    <h2>置中 - 2：元素</h2>
+    <div class="container test-align-items">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+    </div>
+    <h2>置中 - 3：元素與文字</h2>
+    <div class="container">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+    </div>
+    <h2>flex-wrap</h2>
+    <div class="container">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+    </div>
+    <div class="container">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+    </div>
+    <div class="container">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+    </div>
+  </main>
+
+  <script>
+    function toHome() {
+      location.href = "/";
+    };
+  </script>
+</body>
+
+</html>

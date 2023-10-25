@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12-position</title>
+  <link rel="stylesheet" href="../style-for-grid-v2.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <button type="button" onclick="toHome()">回入口目錄頁</button>
+  </header>
+  <main>
+    <h1>position</h1>
+    <!-- 預設值 -->
+    <div class="box">
+      <h2><code>position: static</code></h2>
+      <div class="a">A</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+    </div>
+    <div class="box test-relative">
+      <h2><code>position: relative</code></h2>
+      <div class="a">A</div>
+      <div class="b"><code>left: 50px;</code></div>
+      <div class="c"><code>right: -50px;</code></div>
+      <div class="d"><code>bottom: 50px;</code></div>
+    </div>
+    <div class="box test-absolute">
+      <h2><code>position: absolute</code></h2>
+      <p>外層沒定位，會把視窗當爸來定位自己</p>
+      <div class="a">A</div>
+      <div class="b">absolute：<code>left: 50px;</code></div>
+      <div class="c">C</div>
+      <div class="d">absolute：<code>top: 50px;</code></div>
+    </div>
+    <div class="navbar">
+      <div class="inner">
+        <h2>試做滾動固定的 navbar</h2>
+        <!-- <div>解法一是用js偵測位置，再用CSS改。原本position是abs，到某個位置後變 fix。參考 https://ithelp.ithome.com.tw/articles/10233077 的 navbar</div> -->
+        <div>解法2 https://tools.wingzero.tw/article/sn/251</div>
+        <div>設 sticky & top:0，畫面捲動到超過原本的位置，元素就會黏在指定的位置 top:0</div>
+      </div>
+    </div>
+    <div class="box test-absolute-relative">
+      <h2>relative+absolute</h2>
+      <p>外：<code>position: relative</code></p>
+      <p>內：<code>position: absolute</code></p>
+      <div class="a">A</div>
+      <div class="b"><code>left: 50px;</code></div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+    </div>
+    <div class="box test-fixed">
+      <h2><code>position: fixed</code></h2>
+      <div class="a">A</div>
+      <div class="b">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet in soluta necessitatibus, blanditiis
+          rem unde provident! Consequuntur deserunt facere beata</p>
+        <code>position: fixed; top: 20px;</code>
+      </div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+    </div>
+    <div class="box test-sticky">
+      <h2><code>position: sticky</code></h2>
+      <div class="a">A</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+    </div>
+    <div class="box">
+      <h2>我是空的</h2>
+      <div class="a">A</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+    </div>
+    <div class="footer">
+      <div class="inner">
+        <h2>試做 footer(失敗)</h2>
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+      </div>
+    </div>
+    <div class="box">
+      <h2>我是空的</h2>
+      <div class="a">A</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+    </div>
+    <div class="box">
+      <h2>我是空的</h2>
+      <div class="a">A</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+    </div>
+    <div class="box">
+      <h2>我是空的</h2>
+      <div class="a">A</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+    </div>
+  </main>
+
+  <script>
+    function toHome() {
+      location.href = "/";
+    };
+  </script>
+</body>
+
+</html>

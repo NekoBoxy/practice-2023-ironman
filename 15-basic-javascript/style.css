@@ -1,0 +1,31 @@
+p:nth-child(1) {
+  font-size: 40px;
+}
+
+p:nth-child(2) {
+  font-style: italic;
+}
+
+p:nth-child(3) {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+p:nth-child(4) {
+  font-size: 40px;
+  color: rgb(193, 215, 246);
+  font-weight: 800;
+}
+
+.container {
+  width: 100%;
+}
+
+.item {
+  background-color: cadetblue;
+  transition: 0.3s;
+}
+
+.container:hover>:not(:hover) {
+  opacity: 0.3;
+}

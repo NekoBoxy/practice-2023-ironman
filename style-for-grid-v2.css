@@ -1,0 +1,60 @@
+/* 共用格式 */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1rem 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p,
+span,
+button {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.box {
+  width: 600px;
+  border: 1px solid black;
+  margin: 20px auto;
+  font-size: 1.15rem;
+}
+
+.a {
+  background-color: #faa;
+}
+
+.b {
+  background-color: #afa;
+}
+
+.c {
+  background-color: #aaf;
+}
+
+.d {
+  background-color: #fa3;
+}
+
+.e {
+  background-color: #3af;
+}
+
+.f {
+  background-color: #a3f;
+}
